@@ -8,7 +8,7 @@ declare var saveAs: any;
   styleUrls: ['./svg-to-png.component.css']
 })
 export class SvgToPngComponent implements OnInit {
-
+  id = 'svg-to-png';
   constructor() { }
 
   ngOnInit(): void {
