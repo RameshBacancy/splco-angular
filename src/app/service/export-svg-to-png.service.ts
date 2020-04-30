@@ -10,10 +10,9 @@ export class ExportSvgToPngService {
   constructor(private spinnerService: SpinnerService) { }
 
   export(svgString) {
-    this.spinnerService.openSpinner();
+    // this.spinnerService.openSpinner();
     var width, height;
 
-    // var svgString = document.getElementById('export-SVG').innerHTML;
     let svgTag = (svgString.match(/<svg .*?>/g) || []);
     if (svgTag) {
       width = (svgTag[0].match(/width=".*?"/g) || []);
