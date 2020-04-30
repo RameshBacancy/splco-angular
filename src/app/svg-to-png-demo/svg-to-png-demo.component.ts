@@ -8,6 +8,7 @@ declare var saveAs: any;
   styleUrls: ['./svg-to-png-demo.component.css']
 })
 export class SvgToPngDemoComponent implements OnInit {
+  id = 'svg-to-png-demo';
 
   constructor() { }
 
