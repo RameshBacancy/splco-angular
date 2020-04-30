@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SpinnerService } from './service/spinner.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'svg-to-pdf';
+  public loading = false;
+
+  constructor(private spinnerService: SpinnerService) { }
+
+  ngOnInit(): void {
+    this.spinnerService.getSpinnerObs().subscribe(val => {
+      this.loading = val;
+    })
+  }
 }
